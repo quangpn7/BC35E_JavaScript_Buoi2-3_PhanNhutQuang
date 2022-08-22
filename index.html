@@ -30,14 +30,13 @@
   <body>
     <div class="mb-5"></div>
     <div
-      class="container w-50 m-auto bg-transparent border border-dark shadow pb-5"
+      class="container-fluid w-50 m-auto bg-transparent border border-dark shadow pb-5"
     >
       <p class="pt-3">
         Phan Nhựt Quang <br />
         BC35E - Bài tập JScript buổi 2-3
       </p>
       <hr />
-
       <ul
         class="nav nav-pills mb-3 justify-content-center"
         id="pills-tab"
@@ -117,6 +116,7 @@
       <hr />
       <!-- CONTENT -->
       <div class="tab-content" id="pills-tabContent">
+        <!-- BÀI 1 -->
         <div
           class="tab-pane fade show active"
           id="pills-b1"
@@ -125,7 +125,6 @@
         >
           <h1>BÀI 1</h1>
           <p>Tính tiền lương nhân viên</p>
-
           <div class="container w-75 mt-3 text-center">
             <div class="card">
               <div class="card-header">TÍNH TIỀN LƯƠNG</div>
@@ -134,7 +133,11 @@
               </div>
               <div class="card-body">
                 <label>Số ngày làm: </label>
-                <input id="day" type="text" class="form-control" />
+                <input
+                  id="day"
+                  type="text"
+                  class="form-control d-inline w-25"
+                />
               </div>
               <button
                 id="btnTinh"
@@ -149,6 +152,7 @@
             </div>
           </div>
         </div>
+        <!-- BÀI 2 -->
         <div
           class="tab-pane fade"
           id="pills-b2"
@@ -156,7 +160,65 @@
           aria-labelledby="pills-pills-b2"
         >
           <h1>BÀI 2</h1>
+          <p>Tính giá trị trung bình của 5 số</p>
+          <!-- BÀI TẬP TÍNH GIÁ TRỊ TRUNG BÌNH CỦA 5 SỐ -->
+          <div class="container w-50 mt-5 text-left">
+            <div class="card">
+              <div class="card-header">Trung bình 5 số</div>
+              <div class="card-body pb-0">
+                <label>Số thứ 1: </label>
+                <input
+                  id="num1"
+                  type="number"
+                  class="form-control d-inline w-50"
+                />
+              </div>
+              <div class="card-body pb-0">
+                <label>Số thứ 2: </label>
+                <input
+                  id="num2"
+                  type="number"
+                  class="form-control d-inline w-50"
+                />
+              </div>
+              <div class="card-body pb-0">
+                <label>Số thứ 3: </label>
+                <input
+                  id="num3"
+                  type="number"
+                  class="form-control d-inline w-50"
+                />
+              </div>
+              <div class="card-body pb-0">
+                <label>Số thứ 4: </label>
+                <input
+                  id="num4"
+                  type="number"
+                  class="form-control d-inline w-50"
+                />
+              </div>
+              <div class="card-body">
+                <label>Số thứ 5: </label>
+                <input
+                  id="num5"
+                  type="number"
+                  class="form-control d-inline w-50"
+                />
+              </div>
+              <button
+                id="btnTB"
+                class="bg-success text-white w-75 m-auto p-2 rounded"
+              >
+                TÍNH
+              </button>
+              <div
+                id="ketQuaTB"
+                class="card-footer text-muted mt-4 text-left text-center"
+              ></div>
+            </div>
+          </div>
         </div>
+        <!-- BÀI 3 -->
         <div
           class="tab-pane fade"
           id="pills-b3"
@@ -164,7 +226,123 @@
           aria-labelledby="pills-pills-b3"
         >
           <h1>BÀI 3</h1>
+          <p>Quy đổi tiền</p>
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div
+                class="nav flex-column nav-pills"
+                id="usdToVnd_"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-pills-home-tab"
+                  data-toggle="pill"
+                  data-target="#usdToVnd"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  USD -> VND
+                </button>
+                <button
+                  class="nav-link"
+                  id="vndToUsd_"
+                  data-toggle="pill"
+                  data-target="#vndToUsd"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  VND -> USD
+                </button>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="usdToVnd"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-home-tab"
+                >
+                  <div class="container mt-5 text-left">
+                    <div class="card">
+                      <div class="card-header text-center font-weight-bold">
+                        ĐỔI TIỀN ĐÔ SANG VND
+                      </div>
+                      <div class="card-body pb-0">
+                        <p>GIÁ ĐÔ HIỆN TẠI: 1 USD/ 23,500 VND</p>
+                      </div>
+                      <div class="card-body">
+                        <label>Nhập số tiền Đô: </label>
+                        <input id="dollar" type="number" class="form-control" />
+                      </div>
+                      <button
+                        id="do_vnd"
+                        class="bg-success text-white w-75 m-auto p-2 rounded"
+                      >
+                        TÍNH
+                      </button>
+                      <div
+                        id="ketQuaVND"
+                        class="card-footer text-muted mt-4 text-left text-center"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="vndToUsd"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                >
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="usdToVnd"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-home-tab"
+                    >
+                      <div class="container mt-5 text-left">
+                        <div class="card">
+                          <div class="card-header text-center font-weight-bold">
+                            ĐỔI TIỀN VND SANG ĐÔ
+                          </div>
+                          <div class="card-body pb-0">
+                            <p>GIÁ VND HIỆN TẠI: 23,500 VND / 1 USD</p>
+                          </div>
+                          <div class="card-body">
+                            <label>Nhập số tiền VND: </label>
+                            <input
+                              id="vnd"
+                              type="number"
+                              class="form-control"
+                            />
+                          </div>
+                          <button
+                            id="vnd_do"
+                            class="bg-success text-white w-75 m-auto p-2 rounded"
+                          >
+                            TÍNH
+                          </button>
+                          <div
+                            id="ketQuaUSD"
+                            class="card-footer text-muted mt-4 text-left text-center"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- BÀI 4 -->
         <div
           class="tab-pane fade"
           id="pills-b4"
@@ -172,7 +350,34 @@
           aria-labelledby="pills-pills-b4"
         >
           <h1>BÀI 4</h1>
+          <p>Tính chu vi diện tích hình Chữ Nhật</p>
+          <div class="container w-75 mt-5 text-left">
+            <div class="card">
+              <div class="card-header text-center font-weight-bold">
+                TÍNH CHU VI, DIỆN TÍCH HÌNH CHỮ NHẬT
+              </div>
+              <div class="card-body pb-0">
+                <label>Chiều dài của hình chữ nhật là: </label>
+                <input id="length" type="number" class="form-control" />
+              </div>
+              <div class="card-body">
+                <label>Chiều rộng của hình chữ nhật là: </label>
+                <input id="weight" type="number" class="form-control" />
+              </div>
+              <button
+                id="calc"
+                class="bg-success text-white w-75 m-auto p-2 rounded"
+              >
+                TÍNH
+              </button>
+              <div
+                id="chuViDienTich"
+                class="card-footer text-muted mt-4 text-left"
+              ></div>
+            </div>
+          </div>
         </div>
+        <!-- BÀI 5 -->
         <div
           class="tab-pane fade"
           id="pills-b5"
@@ -180,10 +385,36 @@
           aria-labelledby="pills-pills-b5"
         >
           <h1>BÀI 5</h1>
+          <p>Tính tổng ký số của số có 2 chữ số</p>
+          <div class="container w-50 mt-5 text-left">
+            <div class="card">
+              <div class="card-header text-center font-weight-bold">
+                TÍNH KÝ SỐ CỦA SỐ CÓ 2 CHỮ SỐ
+              </div>
+              <div class="card-body pb-3">
+                <label class="mr-2">Nhập số có 2 chữ số: </label>
+                <input
+                  id="num_2char"
+                  type="number"
+                  class="form-control w-25 d-inline"
+                />
+              </div>
+              <button
+                id="btn_2char"
+                class="bg-success text-white w-75 m-auto p-2 rounded"
+              >
+                TÍNH
+              </button>
+              <div
+                id="totalChar"
+                class="card-footer text-muted mt-4 text-left"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="mb-5"></div>
+    <!-- SCRIPT -->
     <!-- JQUERY -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
